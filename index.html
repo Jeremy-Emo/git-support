@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" />
+		<link rel="stylesheet" href="dist/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Introduction -->
+				<section data-markdown>
+					<textarea data-template>
+						## Git
+
+						---
+
+						### Un système de gestion de versions c'est quoi ?
+
+						---
+
+						<div class="align-left">
+						Un gestionnaire de versions (ou système de contrôle de versions, VCS – Version Control System) est un logiciel qui enregistre l’évolution d’un ensemble de fichiers dans le temps.
+						</div>
+
+						---
+
+						### Fonctions principales :
+
+						<div class="align-left">
+
+						Garder l’historique des modifications (qui a changé quoi et quand).
+
+						Revenir à un état antérieur du projet.
+
+						Travailler à plusieurs sur les mêmes fichiers sans écraser le travail des autres.
+
+						Créer des branches pour développer des fonctionnalités séparément puis les fusionner.
+						</div>
+
+						---
+
+						Sans gestionnaire de version :
+
+						![GIF animé](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzg4aHpjcGE4OWlmbG95enBpYzV2Z29xZXN2YjdnbGdkbjRvZDF1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gMfyVpJGHn0DDCZAUK/giphy.gif)
+
+					</textarea>
+				</section>
+
+				<!-- Historique -->
+				<section data-markdown>
+					<textarea data-template>
+						## Historique et alternatives
+
+						---
+
+						### SVN (Subversion) :
+
+						<div class="align-left">
+
+						Créé en 2000.
+
+						Système centralisé. Un serveur contient le dépôt principal.
+
+						Les utilisateurs doivent être connectés pour travailler.
+						</div>
+
+						---
+
+						### Mercurial :
+
+						<div class="align-left">
+
+						Créé en 2005.
+
+						Système distribué. Chaque utilisateur a une copie complète du dépôt.
+
+						A eu du succès (Google Code l’utilisait).
+						</div>
+
+						---
+
+						### Git :
+
+						<div class="align-left">
+
+						Créé en 2005 par Linus Torvalds pour gérer le développement du noyau Linux.
+
+						Système distribué et rapide.
+
+						S’impose dès 2010 avec GitHub. Aujourd'hui le standard.
+						</div>
+					</textarea>
+				</section>
+
+				<!-- Installation -->
+				<section data-markdown>
+					<textarea data-template>
+						### Installation de git
+
+						---
+
+						Pour Linux (distribution Ubuntu / debian) :
+
+						```sh
+						apt install git
+						```
+
+						---
+
+						Pour Windows :
+
+						https://git-scm.com/downloads/win
+
+						---
+
+						### Installation pour Windows
+
+						![image-1](img/installation-git-1.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-2](img/installation-git-2.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-3](img/installation-git-3.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-4](img/installation-git-4.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-5](img/installation-git-5.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-6](img/installation-git-6.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-7](img/installation-git-7.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-8](img/installation-git-8.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-9](img/installation-git-9.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-10](img/installation-git-10.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-11](img/installation-git-11.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-12](img/installation-git-12.png)
+
+						---
+
+						### Installation pour Windows
+
+						![image-13](img/installation-git-13.png)
+
+						---
+
+						Ouvrons un terminal !
+
+						```sh
+						git --version
+						```
+
+						---
+
+						### Configuration
+
+						```sh
+						git config --global user.name "Nom Prénom"
+						git config --global user.email "email@example.com"
+						```
+
+					</textarea>
+				</section>
+
+				<!-- Initiation -->
+				<section data-markdown>
+					<textarea data-template>
+						## Création du premier dépôt
+
+						---
+
+						Créer un répertoire vide
+
+						```sh
+						cd ~/
+						mkdir cours-git
+						cd cours-git
+						mkdir first
+						```
+
+						---
+
+						Initialiser le dépôt git
+
+						```sh
+						cd ~/cours-git/first # On se place dans le répertoire
+						git init
+						```
+
+						---
+						```sh
+						Initialized empty Git repository in C:/Users/jerem/cours-git/first/.git/
+						```
+
+						![git-init](img/git-init.png)
+
+						---
+
+						### /!\ Voir les fichiers cachés
+
+						---
+
+						Sous Linux en CLI :
+
+						```sh
+						ls -a # ou -la
+						```
+
+						---
+
+						Sous Windows :
+
+						![hidden-1](img/hidden-files-1.png)
+
+						Puis "Options"
+
+						---
+
+						![hidden-2](img/hidden-files-2.png)
+
+						---
+
+						### A quoi sert le .git/ ?
+					</textarea>
+				</section>
+
+				<!-- Premiers commits -->
+				<section data-markdown>
+					<textarea data-template>
+						Créer un fichier texte
+
+						```sh
+						touch test.txt
+						```
+
+						---
+
+						Voir le statut de l'historique git
+
+						```sh
+						git status
+						```
+
+						---
+
+						![first-1](img/first-1.png)
+
+						---
+
+						Ajouter le fichier au tracking
+
+						```sh
+						git add test.txt
+						```
+
+						---
+
+						![first-2](img/first-2.png)
+
+						---
+
+						Enregistrer les modifications
+
+						```sh
+						git commit -m "feat: mon premier commit"
+						```
+
+						---
+
+						![first-3](img/first-3.png)
+
+						---
+
+						Consulter l'historique
+
+						```sh
+						git log --oneline
+						git log --oneline --graph # Avec l'arbre
+						```
+
+						---
+
+						Modifier le contenu du fichier test.txt
+
+						![first-4](img/first-4.png)
+
+						---
+
+						```sh
+						git diff
+						```
+
+						![first-5](img/first-5.png)
+
+						---
+
+						```sh
+						git add .
+						git commit -m "feat: mon deuxième commit"
+						git log --oneline
+						```
+
+						---
+
+						![first-6](img/first-6.png)
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelectorAll(".slides").forEach(slide => {
+					let footer = document.createElement("div");
+					footer.className = "footer";
+					footer.innerHTML = "2025 - Jérémy Emo";
+					slide.appendChild(footer);
+				});
+			});
+		</script>
+	</body>
+</html>
