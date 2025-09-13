@@ -362,6 +362,121 @@
 						---
 
 						![first-6](img/first-6.png)
+
+						---
+
+						Créons maintenant des branches
+
+						---
+
+						```sh
+						git checkout -b feature/ma-feature
+						git branch
+						```
+
+						---
+
+						![git-branch-2](img/git-branch-2.png)
+
+						---
+
+						![git-branch](img/git-branch.svg)
+
+						---
+
+						Créons un nouveau commit
+
+						![git-branch-3](img/git-branch-3.png)
+
+						---
+
+						Retournons sur main
+
+						![git-branch-4](img/git-branch-4.png)
+					</textarea>
+				</section>
+
+				<!-- Travailler à plusieurs -->
+				<section data-markdown>
+					<textarea data-template>
+						## Travailler à plusieurs
+
+						---
+
+						![github-1](img/github-1.jpg)
+
+						---
+
+						https://github.com/
+
+						---
+
+						TP :
+
+						Créer son compte GitHub ainsi qu'un nouveau dépôt et déposer ses sources dessus.
+
+						---
+
+						```sh
+						git remote add origin https://github.com/Jeremy-Emo/cours-git-base-repo.git
+						git branch -M main
+						git push -u origin main
+						```
+
+						---
+
+						Ignorer des fichiers
+
+						ex: fichiers de configuration d'IDE
+
+						---
+
+						TP :
+
+						- Création d'un fichier .gitignore.
+						- Ignorer le dossier test/ du projet
+						- Créer ce répertoire et un fichier à l'intérieur
+						- Créer un commit
+
+						---
+
+						![gitignore-1](img/gitignore-1.png)
+
+						![gitignore-2](img/gitignore-2.png)
+
+						---
+
+						## Récupérer un dépôt
+
+						```sh
+						git clone https://github.com/Jeremy-Emo/cours-git-base-repo.git
+						```
+
+						// TODO : merge / rebase
+						// TODO : gestion des conflits
+
+						git help
+						git reset
+						git revert
+
+						// TODO : présentation d'outils pas en cli
+
+						---
+
+						### Crédits:
+
+						- https://www.atlassian.com
+						-
+					</textarea>
+				</section>
+
+				<!-- END -->
+				<section data-markdown>
+					<textarea data-template>
+						### Crédits:
+
+						- https://www.atlassian.com
+						- https://www.developpez.com/
 					</textarea>
 				</section>
 			</div>
