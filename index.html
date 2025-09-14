@@ -390,7 +390,19 @@
 
 						---
 
+						Modifier le dernier commit :
+
+						```sh
+						git commit --amend
+						```
+
+						---
+
 						Retournons sur main
+
+						```sh
+						git checkout main
+						```
 
 						![git-branch-4](img/git-branch-4.png)
 					</textarea>
@@ -407,13 +419,19 @@
 
 						---
 
-						https://github.com/
+						- Github
+						- Gitlab
+						- Bitbucket
+						- Azure devops
+						- ...
 
 						---
 
 						TP :
 
 						Créer son compte GitHub ainsi qu'un nouveau dépôt et déposer ses sources dessus.
+
+						https://github.com/
 
 						---
 
@@ -452,27 +470,125 @@
 						git clone https://github.com/Jeremy-Emo/cours-git-base-repo.git
 						```
 
-						// TODO : merge / rebase
-						// TODO : gestion des conflits
+						---
 
-						git help
-						git reset
-						git revert
+						## Consulter les branches du dépôt
 
-						// TODO : présentation d'outils pas en cli
+						```sh
+						git branch -a
+						```
 
 						---
 
-						### Crédits:
+						## Fusionner ses branches
 
-						- https://www.atlassian.com
-						-
+						---
+
+						![github-2](img/github-2.svg)
+
+						---
+
+						Depuis main :
+
+						```sh
+						git merge feature/mon-autre-branche
+						```
+
+						---
+
+						![github-3](img/github-3.svg)
+
+						---
+
+						TP :
+						Fusionner la branche feature/tp-merge dans main puis observer le résultat
+
+						---
+
+						## Réécrire l'histoire avec rebase
+
+						---
+
+						![rebase](img/rebase.svg)
+
+						---
+
+						Essayer de rebase main sur la branche feature/tp-rebase
+
+						---
+
+						![rebase2](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenN6bTF3ajM1ZmtjM3VqYWVpcnlqZTdmYnRlY3V2Y2VmcnQwam1zayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0IxYWDltdHEqujnO/giphy.gif)
+
+						---
+
+						![rebase3](img/rebase-3.png)
+
+						---
+
+						```sh
+						git status
+						```
+
+						---
+
+						![rebase4](img/rebase-4.png)
+
+						---
+
+						Une fois les conflits résolus :
+
+						```sh
+						git add <fichier en conflit>
+						git rebase --continue
+						git push --force-with-lease
+						```
+
+					</textarea>
+				</section>
+
+				<!-- TP -->
+				<section data-markdown>
+					<textarea data-template>
+						# TP en équipe
+
+						---
+
+						Réussir à travailler ensemble sur le remplissage d'un fichier .txt. Chacun va devoir s'occuper d'une partie et fusionner son travail avec celui de son équipe.
+
+						Vous pouvez communiquer, mais pas attendre les commits de vos partenaires avant de faire les vôtres !
+
 					</textarea>
 				</section>
 
 				<!-- END -->
 				<section data-markdown>
 					<textarea data-template>
+						## Astuces
+
+						---
+
+						```sh
+						git help
+						```
+
+						---
+
+						Revenir en arrière
+
+						```sh
+						git reset <sha>
+						git revert <sha>
+						```
+
+						---
+
+						Pour aller plus loin :
+
+						- Squash ses commits (https://www.ekino.fr/publications/comment-squasher-efficacement-ses-commits-avec-git/)
+						- Git flow (https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+						---
+
 						### Crédits:
 
 						- https://www.atlassian.com

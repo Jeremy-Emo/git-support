@@ -1,5 +1,9 @@
 # Support de cours pour l'apprentissage de git
 
+## Setup
+
+Installer nodejs
+
 ## Lancer le support
 
 ```sh
